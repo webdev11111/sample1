@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Universe - Student Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* (Your existing styles remain unchanged) */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Academic Universe</h1>
+    </header>
+
+    <nav>
+        <a class="navbar-brand" href="#">Home</a>
+        <a class="navbar-brand" href="#">Manage Students</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+
+    <section class="container mt-4">
+        <h2>Student Management</h2>
+        <!-- Add your content for managing students here -->
+        <p>Welcome to the academic universe, where knowledge meets innovation.</p>
+        <div class="row">
+            <!-- Student 1 -->
+            <div class="col-md-4">
+                <div class="card student-card">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Class: 10A</p>
+                        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#studentModal1">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add 10 more student cards here -->
+
+            <!-- Student 2 -->
+            <div class="col-md-4">
+                <div class="card student-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Jane Doe</h5>
+                        <p class="card-text">Class: 10B</p>
+                        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#studentModal2">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ... (Add 10 more students) ... -->
+        </div>
+
+        <!-- Add more buttons or forms for managing students -->
+        <a href="#" class="btn btn-custom">Explore Students</a>
+        <a href="#" class="btn btn-custom">Enroll New Student</a>
+    </section>
+
+    <!-- Modals for Student Details -->
+    <!-- Student 1 Modal -->
+    <div class="modal fade" id="studentModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">John Doe's Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add details for John Doe here -->
+                    <p>Attendance: 90%</p>
+                    <!-- Add more details as needed -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student 2 Modal -->
+    <div class="modal fade" id="studentModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Similar structure as the first modal, customize for each student -->
+    </div>
+
+    <!-- ... (Add 10 more modals) ... -->
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

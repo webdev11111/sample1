@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="style.css/studentviewprofile.css">
+</head>
+<body>
+  <h1> Profile</h1>
+  <table>
+    <tr>
+      <th>Name:</th>
+      <td><input type="text" id="nameInput" placeholder="Enter student name" /></td>
+    </tr>
+    <tr>
+      <th>Age:</th>
+      <td><input type="text" id="ageInput" placeholder="Enter student age" /></td>
+    </tr>
+    <tr>
+      <th>Grade:</th>
+      <td><input type="text" id="gradeInput" placeholder="Enter student grade" /></td>
+    </tr>
+    <tr>
+      <th>Department:</th>
+      <td><input type="text" id="departmentInput" placeholder="Enter department" /></td>
+    </tr>
+  </table>
+
+  <button onclick="saveProfile()">Save</button>
+
+  <script>
+    function saveProfile() {
+      // Get input values
+      var name = document.getElementById('nameInput').value;
+      var age = document.getElementById('ageInput').value;
+      var grade = document.getElementById('gradeInput').value;
+      var department = document.getElementById('departmentInput').value;
+
+      // Display saved values in the input fields
+      document.getElementById('nameInput').placeholder = name;
+      document.getElementById('ageInput').placeholder = age;
+      document.getElementById('gradeInput').placeholder = grade;
+      document.getElementById('departmentInput').placeholder = department;
+
+      // Optionally, you can clear the input fields after saving
+      // document.getElementById('nameInput').value = '';
+      // document.getElementById('ageInput').value = '';
+      // document.getElementById('gradeInput').value = '';
+      // document.getElementById('departmentInput').value = '';
+
+      alert("Profile saved!");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Placement Reports</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="mt-5 mb-4">Placement Reports</h1>
+
+    <!-- Company Selection Dropdown -->
+    <div class="mb-3">
+      <label for="companySelect" class="form-label">Select Company:</label>
+      <select class="form-select" id="companySelect" onchange="generateReport()">
+        <!-- Add company options dynamically using JavaScript -->
+      </select>
+    </div>
+
+    <!-- Display Reports -->
+    <div id="reportContainer">
+      <!-- Reports will be displayed here -->
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (required for some Bootstrap components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    // Sample data (replace with your actual data)
+    const companies = ["Company XYZ", /* Add other company names */];
+
+    // Function to generate and display the report for the selected company
+    function generateReport() {
+      const selectedCompany = document.getElementById("companySelect").value;
+      const reportContainer = document.getElementById("reportContainer");
+
+      // Sample report data for a computer science-related job for Company XYZ
+      const reports = {
+        "Company XYZ": {
+          about: "Company XYZ is a leading tech company that specializes in developing cutting-edge software solutions. With a focus on innovation and a commitment to excellence, we provide a dynamic and collaborative work environment for our employees.",
+          culture: "Our company culture is rooted in creativity, teamwork, and continuous learning. We believe in fostering a workplace where ideas flourish, and every team member has the opportunity to contribute to meaningful projects.",
+          opportunities: "As a computer science student, you'll have the chance to work on diverse and challenging projects that span the full software development lifecycle. Whether you're interested in front-end development, back-end systems, or data science, we have opportunities that align with your skills and interests.",
+          benefits: "We understand the importance of work-life balance and offer flexible work hours. Our comprehensive benefits package includes health insurance, retirement plans, and opportunities for professional development. Additionally, we provide a conducive environment for learning and growing in your career.",
+          applicationProcess: "To apply for a position at Company XYZ, please visit our careers page on our official website. There, you'll find a list of current job openings and instructions on how to submit your application. Be sure to highlight your relevant experience, skills, and passion for technology in your resume and cover letter.",
+          interviewProcess: "Our interview process typically includes a phone screening, technical assessment, and in-person interviews. We value both technical proficiency and soft skills, so be prepared to discuss your coding projects, problem-solving abilities, and your ability to collaborate with a team.",
+          contact: "For any inquiries or more information, feel free to reach out to our HR department at hr@companyxyz.com. We look forward to potentially welcoming you to our team and wish you the best of luck in your job search!"
+        }
+      };
+
+      // Display the selected company's report
+      reportContainer.innerHTML = `
+        <h3 class="mt-4">${selectedCompany} - Company Report</h3>
+        <p><strong>About:</strong> ${reports[selectedCompany].about}</p>
+        <p><strong>Culture:</strong> ${reports[selectedCompany].culture}</p>
+        <p><strong>Opportunities:</strong> ${reports[selectedCompany].opportunities}</p>
+        <p><strong>Benefits:</strong> ${reports[selectedCompany].benefits}</p>
+        <p><strong>Application Process:</strong> ${reports[selectedCompany].applicationProcess}</p>
+        <p><strong>Interview Process:</strong> ${reports[selectedCompany].interviewProcess}</p>
+        <p><strong>Contact:</strong> ${reports[selectedCompany].contact}</p>
+      `;
+    }
+
+    // Populate the company selection dropdown
+    function populateCompanyDropdown() {
+      const companySelect = document.getElementById("companySelect");
+
+      companies.forEach((company) => {
+        const option = document.createElement("option");
+        option.value = company;
+        option.text = company;
+        companySelect.add(option);
+      });
+
+      // Generate report for the initial selected company
+      generateReport();
+    }
+
+    // Call the function to populate the dropdown on page load
+    window.onload = populateCompanyDropdown;
+  </script>
+</body>
+</html>
